@@ -53,12 +53,25 @@ var_dump($floats);
 var_dump($string);
 var_dump($array);
 
+/**
+ * ? ++$a  => preincremento
+ * ? $a++  => postincremento
+ * ? --$a  => predecremento
+ * ? $a--  => postdecremento
+ * 
+ */
+/**
+ * * Extencion de un string => strlen
+ * * eliminar espacios en blanco => trim
+ * * convertirlo a mayuscula => strtoupper
+ * * convertirlo a minusculas => strtolower
+ * * revisar si un string existe o no => strpos
+ * 
+ * 
+ */
 
-
-
-
-
-
+$nombre = "jose david ramirez";
+echo strpos($nombre,"david")
 
 
 ?>
