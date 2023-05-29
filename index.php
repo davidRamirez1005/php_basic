@@ -71,9 +71,20 @@ var_dump($array);
  */
 
 $nombre = "jose david ramirez";
-echo strpos($nombre,"david")
+echo strpos($nombre,"david");
 
+/**
+ * * Arrays
+ * 
+ */
+$numeros=[1,2,4,23,32,54,3,];
+function cube($n)
+{
+    return($n * $n * $n);
+}
 
+$b = array_map("cube", $numeros);
+print_r($b);
 ?>
 </body>
 </html>
