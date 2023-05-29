@@ -38,6 +38,20 @@ echo $text." ".MENSAJE."<br>";
 var_dump(MENSAJE);
 
 
+/**
+ * * int, float, string, bool, array, object, resource, null
+ */
+$logueado = true;
+$numero = 200;
+$floats = 200.4;
+$string = "juan";
+$array = [];
+
+var_dump($logueado);
+var_dump($numero);
+var_dump($floats);
+var_dump($string);
+var_dump($array);
 
 
 
