@@ -8,8 +8,15 @@
 </head>
 <body>
 
-
+/**
+* * estructura basica de php
+*/
 <?php
+
+
+/**
+ * !funciones basicas para mostrar
+ */
 $variable = "jose david";
 var_dump($variable);
 echo "<br>"."<br>";
@@ -23,7 +30,9 @@ echo "<br>"."<br>";
 // header("Content-Type: application/pdf");
 
 define("MENSAJE","mundo");
-
+/**
+ * ! variables y constantes
+ */
 echo $text." ".MENSAJE."<br>";
 
 var_dump(MENSAJE);
