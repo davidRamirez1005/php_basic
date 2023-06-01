@@ -7,7 +7,7 @@
 => array_reduce(): Reduce un array a un solo valor aplicando una función de devolución de llamada.
 => array_key_exists(): Comprueba si una clave existe en un array.
 => in_array(): Comprueba si un valor existe en un array.
-array_rand(): Devuelve una o varias claves aleatorias de un array.
+=> array_rand(): Devuelve una o varias claves aleatorias de un array.
 => array_unique(): Elimina los valores duplicados de un array.
 => array_intersect(): Devuelve un array con los valores comunes a todos los arrays dados.
 => array_diff(): Devuelve un array con los valores del primer array que no están presentes en los arrays adicionales.
