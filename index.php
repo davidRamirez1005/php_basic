@@ -225,11 +225,101 @@ echo "array_unique:  <br>";
 $entrada2 = array("a" => "verde", "rojo", "b" => "verde", "azul", "rojo");
 $resultado2 = array_unique($entrada2);
 print_r($resultado2);
+
 echo "<hr>";
+
+$variable=[];
+foreach ($variable as $key => $value) {
+        # code...
+    }
+
+echo "<hr>";
+
+/**
+ * !     iseet() = comprueba si esta definido y no es null
+ * !     empty() = comprueba si esta vacio 
+ * 
+ */
+$lista = [];
+$lista["nombre2"] = "Pepito perez";
+
+if(!isset($lista["nombre"])){
+    $lista["nombre"] = "Miguel";
+}
+print_r($lista);
+echo "<br><br>";
+$variableEmpty="";
+if (empty($variableEmpty)) {
+    echo "la variable esta vacia o no esta definida";
+}else{
+    echo "la variable no tiene valor";
+};
+
+echo "<hr>";
+
+/**
+ * ? for =  es igual que en js solo que para saber la longitud es count()
+ */
+$index = [];
+for ($index = 0; $index < count($lista); $index++) {
+
+    
+}
+
+echo "<hr>";
+
+
+/**
+ * ? try catch 
+ */
+
+try {
+    //code...
+} catch (\Throwable $th) {
+    //throw $th;
+}finally{
+
+}
+/**
+ * ? forEach = 
+ */
+// foreach ($variable as $key => $value) {
+//     # code...
+// }
+$frutas = array("manzana", "banana", "cereza");
+
+// Recorrer el arreglo con foreach e iterar el índice y el valor
+foreach ($frutas as $indice => $fruta) {
+    echo "En la posición " . $indice . " se encuentra la fruta: " . $fruta . "<br>";
+}
+echo "<hr>"
+/**
+ *  ? estructuras de control = funcionan igual que en js para tomar decisiones
+ */
+
+// if(true){
+
+// };
+
+// $index = [];
+// for ($index = 0; $index < count($lista); $index++) {
+
+// }
+// while(true){
+
+// };
+
+// do{
+
+// }while(false);
+
+
+
+
+
 ?>
-<?php
-echo $_SERVER['HTTP_USER_AGENT'];
-?>
+
+
 
 </body>
 </html>
