@@ -227,5 +227,9 @@ $resultado2 = array_unique($entrada2);
 print_r($resultado2);
 echo "<hr>";
 ?>
+<?php
+echo $_SERVER['HTTP_USER_AGENT'];
+?>
+
 </body>
 </html>
