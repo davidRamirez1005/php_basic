@@ -335,7 +335,10 @@ if (password_verify($contrasena_ingresada, $hash)) {
 
 echo "<hr>";
 
-
+function saludar($nombre){
+    return "hola $nombre como estas";
+}
+echo $saludar("david");
 
 ?>
 
