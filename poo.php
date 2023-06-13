@@ -25,6 +25,7 @@ class humano{
     protected function saludar(){
         return "Hola mi alias es:".$this->alias;
     }
+    
     public function __set(string $name, mixed $value){
         $this->{$name} = $value;
     }
