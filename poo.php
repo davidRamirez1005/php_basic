@@ -25,7 +25,7 @@ class humano{
     protected function saludar(){
         return "Hola mi alias es:".$this->alias;
     }
-    
+
     public function __set(string $name, mixed $value){
         $this->{$name} = $value;
     }
@@ -54,3 +54,56 @@ $obj->__set("saludar", "Hola mundo");
 // print_r($obj->__get("huella"));
 
 print_r($obj->__get("saludar"));
+
+echo "<br><br>";
+
+
+/**
+ * ! clases abstractas
+ */
+abstract class animal{
+    public function sonido($p1=null){
+        return "el sonido del animal es : $p1";
+    }
+}
+
+class perro extends animal{
+
+}
+class gato extends animal{
+
+}
+$obj = new perro();
+print_r($obj->sonido("gua gua"));
+echo "<br>";
+$obj2 = new gato();
+print_r($obj2->sonido("miau miau"));
+
+
+/**
+ * ! interfaces
+ */
+abstract class animales{
+    public function sonido($p1=null){
+        return "el sonido del animal es $p1";
+    }
+    public function comer(){
+        return "el animal come";
+    }
+}
+interface canino{
+    public function sonido($p1);
+}
+interface felino{
+    public function sonido($p1);
+}
+class cat extends animales implements felino{
+
+}
+echo "<br><br>";
+$obj3 = new cat();
+echo $obj3->sonido("miau");
+echo "<br>";
+echo $obj3->comer();
+
+?>
