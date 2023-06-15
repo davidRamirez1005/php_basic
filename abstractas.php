@@ -43,19 +43,19 @@ class CuentaAhorros extends CuentaBancaria{
         return $resta;
     }
 }
-$monto = 900;
-$obj = new CuentaCorriente(1000);
-print "<br>";
-print $obj->depositar($monto);
-print "<br>";
-print $obj->retirar($monto);
-print "<hr>";
+$_DATA = json_decode(file_get_contents("php://input"),true);
+// $monto = 900;
+$obj = new CuentaCorriente($_DATA["cuenta_corriente"]);
+print "\n";
+print $obj->depositar($_DATA["monto"]);
+print "\n";
+print $obj->retirar($_DATA["monto"]);
 
 $obj = new CuentaAhorros(1000);
-print "<br>";
-echo $obj->depositar($monto);
-echo "<br>";
-echo $obj->retirar($monto);
+print "\n";
+echo $obj->depositar($_DATA["monto"]);
+echo "\n";
+echo $obj->retirar($_DATA["monto"]);
 
 
 
