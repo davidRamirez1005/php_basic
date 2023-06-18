@@ -116,7 +116,7 @@ print_r($pila);
 echo "<hr>";
 
 /**
- * !=> array_flip(): Devuelve los valores de una sola columna del array de entrada
+ * !=> array_column(): Devuelve los valores de una sola columna del array de entrada
  */
 $registros = array(
     array(
@@ -312,6 +312,9 @@ echo "<hr>";
 // do{
 
 // }while(false);
+/**
+ * ! hash
+ */
 echo "<textarea name='misdatos'>\n";
 echo htmlspecialchars($datos)."\n";
 echo "</textarea>";

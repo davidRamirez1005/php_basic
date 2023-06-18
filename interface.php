@@ -19,30 +19,80 @@ Para probar tu código, crea un objeto Parqueadero y estaciona y retira tanto un
 */
 
 
-abstract class Vehiculo{
-    public function __construct(public string $placa){}
+abstract class Vehiculo {
+    public function __construct(public string $placa) {}
     abstract public function getType();
 }
-class coche extends Vehiculo {
-    public function getType(){}
-}
-class Motocicleta extends Vehiculo{
-    public function getType(){}
-}
-interface ParqueaderoInterface{
-    public function estacionar($vehiculo);
-    public function retirar($vehiculo);
 
+class Coche extends Vehiculo {
+    public function getType() {
+        return "Coche";
+    }
 }
 
-class Parqueadero implements ParqueaderoInterface{
-    public function __construct(public $almacenar = array("parqueadero"=>0)){}
-
-    public function estacionar($vehiculo){}
-    public function retirar($vehiculo){}
+class Motocicleta extends Vehiculo {
+    public function getType() {
+        return "Motocicleta";
+    }
 }
 
-$_DATA = json_decode(file_get_contents("php://input"),true);
+interface ParqueaderoInterface {
+    public function estacionar(Vehiculo $vehiculo);
+    public function retirar(Vehiculo $vehiculo);
+}
+
+class Parqueadero implements ParqueaderoInterface {
+    private array $vehiculos = [];
+
+    public function estacionar(Vehiculo $vehiculo) {
+        $this->vehiculos[] = $vehiculo;
+        echo "Vehículo estacionado: Placa {$vehiculo->placa}, Tipo {$vehiculo->getType()}\n";
+    }
+
+    public function retirar(Vehiculo $vehiculo) {
+        $index = array_search($vehiculo, $this->vehiculos);
+        if ($index !== false) {
+            unset($this->vehiculos[$index]);
+            echo "Vehículo retirado: Placa {$vehiculo->placa}, Tipo {$vehiculo->getType()}\n";
+        }
+    }
+}
+
+$_DATA = json_decode(file_get_contents("php://input"), true);
+
+if ($_DATA !== null && is_array($_DATA)) {
+    $parqueadero = new Parqueadero();
+
+    foreach ($_DATA as $data) {
+        if (isset($data['accion']) && isset($data['vehiculo'])) {
+            $accion = $data['accion'];
+            $vehiculoData = $data['vehiculo'];
+
+            if ($accion === "estacionar") {
+                $placa = $vehiculoData['placa'];
+                $tipo = $vehiculoData['tipo'];
+                $vehiculo = ($tipo === "Coche") ? new Coche($placa) : new Motocicleta($placa);
+
+                $parqueadero->estacionar($vehiculo);
+            } elseif ($accion === "retirar") {
+                $placa = $vehiculoData['placa'];
+                $tipo = $vehiculoData['tipo'];
+                $vehiculo = ($tipo === "Coche") ? new Coche($placa) : new Motocicleta($placa);
+
+                $parqueadero->retirar($vehiculo);
+            }
+        } else {
+            // Datos JSON inválidos o faltantes para un objeto
+            // Realiza alguna acción o devuelve una respuesta de error
+        }
+    }
+} else {
+    // Datos JSON inválidos o faltantes
+    // Realiza alguna acción o devuelve una respuesta de error
+}
+
+
+
 
 
 ?>
