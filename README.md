@@ -70,3 +70,51 @@ desde fuera de la clase directamente.
 **Herencia:** Es un mecanismo que permite crear nuevas clases basadas en clases existentes. La clase que se utiliza como base se denomina "clase padre" o "superclase", y la clase que se deriva se llama "clase hija" o "subclase". La herencia permite la reutilización de código y la creación de jerarquías de clases.
 
 **Polimorfismo:** Es la capacidad de un objeto de tomar diferentes formas o comportarse de diferentes maneras según el contexto. Permite utilizar una interfaz común para objetos de diferentes clases y proporciona flexibilidad y extensibilidad en el diseño de programas.
+
+--------------------------------------------------------------------
+
+`Namespaces en PHP`
+
+la palabra clave use se utiliza en la definición de espacios de nombres (namespace) para importar clases, funciones y constantes desde otros espacios de nombres.
+
+--------------------------------------------------------------------
+
+#  Integración de php con Bases de datos relacionales (Mysql)
+
+
+
+**. Bases de datos relacionales**
+
+*sistema de gestión de bases de datos (SGBD)*
+
+*lenguaje de consulta estructurado(SQL)*
+
+*sistema de gestión de bases de datos relacionales (RDBMS)*
+
+Las relaciones entre las tablas se establecen mediante claves primarias y claves foráneas. Una *clave primaria* es un atributo o conjunto de atributos que identifica de forma única cada fila en una tabla. Una *clave foránea* es un atributo en una tabla que hace referencia a la clave primaria de otra tabla, estableciendo así una relación entre ellas. Estas relaciones permiten conectar la información entre diferentes tablas y realizar consultas y operaciones complejas.
+
+![image-20230618115530986](/home/skylab-179/.config/Typora/typora-user-images/image-20230618115530986.png)
+
+*La normalización de bases de datos* es un proceso de diseño que se utiliza para organizar y estructurar las tablas de una base de datos relacional de manera eficiente y libre de redundancias. El objetivo principal de la normalización es eliminar la duplicación de datos y garantizar la integridad y consistencia de la información almacenada.
+
+
+--------------------------------------------------------------------
+
+# MySQL
+
+
+
+
+--------------------------------------------------------------------
+
+# SQL 
+
+SQL permite a los usuarios crear, modificar y eliminar bases de datos, así como realizar consultas para recuperar información específica de una base de datos. Con SQL, puedes crear tablas para almacenar datos, definir relaciones entre las tablas, agregar, actualizar o eliminar registros y realizar consultas complejas para obtener información precisa.
+
+**DDL (Data Definition Language):** Utilizado para definir y modificar la estructura de la base de datos. Incluye comandos como *CREATE*, *ALTER* y *DROP* para crear, modificar y eliminar tablas, índices, vistas, etc. 
+
+ **DML (Data Manipulation Language):** Utilizado para manipular los datos almacenados en la base de datos. Incluye comandos como *INSERT*, *UPDATE* y *DELETE* para agregar, actualizar y eliminar registros. 
+
+ **DQL (Data Query Language):** Utilizado para realizar consultas y recuperar información de la base de datos. El comando más común es *SELECT*, que permite especificar los criterios de búsqueda y los campos a recuperar. 
+
+ **DCL (Data Control Language):** Utilizado para controlar los privilegios de acceso a la base de datos. Incluye comandos como *GRANT* y *REVOKE* para otorgar y revocar permisos.
