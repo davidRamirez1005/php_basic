@@ -93,9 +93,15 @@ la palabra clave use se utiliza en la definición de espacios de nombres (namesp
 
 Las relaciones entre las tablas se establecen mediante claves primarias y claves foráneas. Una *clave primaria* es un atributo o conjunto de atributos que identifica de forma única cada fila en una tabla. Una *clave foránea* es un atributo en una tabla que hace referencia a la clave primaria de otra tabla, estableciendo así una relación entre ellas. Estas relaciones permiten conectar la información entre diferentes tablas y realizar consultas y operaciones complejas.
 
-![image-20230618115530986](/home/skylab-179/.config/Typora/typora-user-images/image-20230618115530986.png)
+
 
 *La normalización de bases de datos* es un proceso de diseño que se utiliza para organizar y estructurar las tablas de una base de datos relacional de manera eficiente y libre de redundancias. El objetivo principal de la normalización es eliminar la duplicación de datos y garantizar la integridad y consistencia de la información almacenada.
+
+
+
+### conexion PDO con php
+
+
 
 
 --------------------------------------------------------------------
@@ -112,6 +118,26 @@ Las relaciones entre las tablas se establecen mediante claves primarias y claves
 SQL permite a los usuarios crear, modificar y eliminar bases de datos, así como realizar consultas para recuperar información específica de una base de datos. Con SQL, puedes crear tablas para almacenar datos, definir relaciones entre las tablas, agregar, actualizar o eliminar registros y realizar consultas complejas para obtener información precisa.
 
 **DDL (Data Definition Language):** Utilizado para definir y modificar la estructura de la base de datos. Incluye comandos como *CREATE*, *ALTER* y *DROP* para crear, modificar y eliminar tablas, índices, vistas, etc. 
+
+crear una tabla:
+
+`
+
+```sql
+mysql -u tu_usuario -p -e "CREATE TABLE nombre_tabla (columna1 tipo_dato1, columna2 tipo_dato2, ...);"`
+```
+
+Modificar una tabla en MySQL:
+
+```sql
+`mysql -u tu_usuario -p -e "ALTER TABLE nombre_tabla ADD columna_nueva tipo_dato;"`
+```
+
+Eliminar una tabla en MySQL:
+
+```sql
+`mysql -u tu_usuario -p -e "DROP TABLE nombre_tabla;"`
+```
 
  **DML (Data Manipulation Language):** Utilizado para manipular los datos almacenados en la base de datos. Incluye comandos como *INSERT*, *UPDATE* y *DELETE* para agregar, actualizar y eliminar registros. 
 
