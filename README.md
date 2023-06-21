@@ -1,5 +1,43 @@
 # php_basic
+--------------------------------------------------------------------
 
+### Variables superglobales
+
+**$GLOBALS:** Nos brinda información de todas las variables globales que existen.
+
+**$_SERVER:** Nos brinda información del servidor.
+
+**$_GET:** Nos brinda información de todas las variables o parámetros que son pasadas por URL.
+
+**$_POST:** Nos brinda información de las variables que son enviadas a través del método POST de HTTP.
+
+**$_FILES:** Nos brinda información de variables de subida de ficheros HTTP con el método POST.
+
+**$_COOKIE:** Nos brinda información de todas las cookies.
+
+**$_SESSION:** Nos brinda información de todas las variables de sesiones.
+
+**$_REQUEST:** Por defecto contiene el contenido o valores de las variables superglobales $_GET, $_POST y $_COOKIE.
+
+**$_ENV:** Nos brinda información del entorno en el que se está ejecutando PHP.
+
+
+--------------------------------------------------------------------
+
+### redirecciones => funcion header()
+
+En el modelo cliente/servidor es comin querer enviar informacion extra (autenticacion, control de cookies, control de caché, etc.). Esto lo podemos hacer con la funcion header.
+
+puedes mandar:
+
+autenticacion
+control de cookies
+control de cache
+Uno de los headers que podemos mandar son redirects,es decir, el servidor puede responder al navegador Oye, redirige al usuario a esta pagina.
+
+utlizar la funcion exit() o die al terminar tus headers para que los crawlers se detengan de analizar
+
+--------------------------------------------------------------------
 => **array_flip():** Intercambia las claves con sus valores correspondientes en un array.
 => **array_fill():** Rellena un array con un valor especificado.
 => **array_filter():** Filtra los elementos de un array utilizando una función de devolución de llamada.
@@ -71,11 +109,6 @@ desde fuera de la clase directamente.
 
 **Polimorfismo:** Es la capacidad de un objeto de tomar diferentes formas o comportarse de diferentes maneras según el contexto. Permite utilizar una interfaz común para objetos de diferentes clases y proporciona flexibilidad y extensibilidad en el diseño de programas.
 
---------------------------------------------------------------------
-
-`Namespaces en PHP`
-
-la palabra clave use se utiliza en la definición de espacios de nombres (namespace) para importar clases, funciones y constantes desde otros espacios de nombres.
 
 --------------------------------------------------------------------
 
@@ -97,7 +130,18 @@ Las relaciones entre las tablas se establecen mediante claves primarias y claves
 
 *La normalización de bases de datos* es un proceso de diseño que se utiliza para organizar y estructurar las tablas de una base de datos relacional de manera eficiente y libre de redundancias. El objetivo principal de la normalización es eliminar la duplicación de datos y garantizar la integridad y consistencia de la información almacenada.
 
+--------------------------------------------------------------------
 
+- *Composer* es una herramienta que permite la “autocarga”, quiere decir que me evito agregar la directiva require y otras para importar archivos.
+- Composer require de un archivo de configuracion para saber que archivos “autocargar”, este archivo es composer.json
+- el archivo composer.json es un objeto de javascript donde defino la estructura de mis archivos, nada mas no hay porque temerle.
+- los *namespace* son espacios para una clase, asi por tanto aunque tenga dos clases que tengan el mismo nombre el namespace es como “el apellido” para que estas nunca colisionen por el nombre.
+
+`Namespaces en PHP`
+
+la palabra clave use se utiliza en la definición de espacios de nombres (namespace) para importar clases, funciones y constantes desde otros espacios de nombres.
+
+--------------------------------------------------------------------
 
 ### conexion PDO con php
 
