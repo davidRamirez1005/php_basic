@@ -1,5 +1,5 @@
 <?php
-    
+    // TODO => AOUTOLOAD
     function autoload($e){ 
         $carpeta = (array)[
             dirname(__DIR__)."/scripts/clients/",
@@ -10,17 +10,17 @@
             if ($handler = opendir($ruta)) {
                 while ($file = readdir($handler)) {
                     if($file!= "." & $file!=".."){
-                        echo $ruta."/".$file."\n";
+                        // muestra cada ruta:
+                        // echo $ruta."/".$file."\n";
                         require_once $ruta."/".$file;
                     }
                 }
             }
         }
     }
-
     spl_autoload_register('autoload');
 
-    new \app\details\detalle();
+    print_r(\app\details\detalle::getInstance(["nombre"=>"jose","edad"=>19]));
     
 
 ?>

@@ -1,9 +1,20 @@
 <?php
     namespace app\details;
     class detalle{
-        function __construct(){
-            echo "NOMBRE ".__CLASS__;
+        static $getinstance;
+        function __construct(public $nombre, protected $edad){
         }
-    }
+            // echo "NOMBRE ".__CLASS__;
 
+           // TODO => SINGLETON
+            static function getInstance(){
+                $arg = (array)func_get_args()[0];
+                if(!self::$getinstance instanceof self){
+                    self::$getinstance = new self(...$arg);
+                    return self::$getinstance;
+                }
+                return self::$getinstance;
+            }
+    }
+// new detalle() instanceof detalle;
 ?>
