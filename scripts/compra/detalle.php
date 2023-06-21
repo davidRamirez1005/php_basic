@@ -1,20 +1,12 @@
 <?php
     namespace app\details;
+    use getInstance as instance;
     class detalle{
-        static $getinstance;
+        use instance;
         function __construct(public $nombre, protected $edad){
         }
             // echo "NOMBRE ".__CLASS__;
 
-           // TODO => SINGLETON
-            static function getInstance(){
-                $arg = (array)func_get_args()[0];
-                if(!self::$getinstance instanceof self){
-                    self::$getinstance = new self(...$arg);
-                    return self::$getinstance;
-                }
-                return self::$getinstance;
-            }
     }
 // new detalle() instanceof detalle;
 ?>

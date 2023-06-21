@@ -1,6 +1,23 @@
 <?php
+    trait getInstance{
+        static $getinstance;
+
+        // TODO => SINGLETON
+        static function getInstance(){
+        $arg = (array)func_get_args()[0];
+        if(!self::$getinstance instanceof self){
+            try {
+                self::$getinstance = new self(...$arg);
+                return self::$getinstance;
+            } catch (\Throwable $e) {
+                return $e ->getMessage();
+            }
+        }
+        return self::$getinstance;
+    }
+}
     // TODO => AOUTOLOAD
-    function autoload($e){ 
+    function autoload(){ 
         $carpeta = (array)[
             dirname(__DIR__)."/scripts/clients/",
             dirname(__DIR__)."/scripts/compra/"
@@ -21,6 +38,8 @@
     spl_autoload_register('autoload');
 
     print_r(\app\details\detalle::getInstance(["nombre"=>"jose","edad"=>19]));
+
     
+
 
 ?>
