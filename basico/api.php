@@ -1,4 +1,8 @@
 <?php
+/**
+ * ! file_get_contents(): 
+ * ? se utiliza para leer el contenido de un archivo y devolverlo como una cadena de texto.
+ */
     $credenciales["http"]["method"] = "POST";
     $credenciales["http"]["header"] = "Content-type: application/json";
     $data = [
