@@ -15,7 +15,17 @@
 
 **$_COOKIE:** Nos brinda información de todas las cookies.
 
+son un pedacito de memoria que se le presta a cualquier pagina web para que puedan guardar informacion personalizada acerca de ti
+
 **$_SESSION:** Nos brinda información de todas las variables de sesiones.
+
+Nos permiten implementar sistemas de autenticacion dentro de nuestros sition web. Una sesion es una cookie temporal y encriptada que estrá viva y contendrá toda la informacion del usuario mientras esté activa
+
+Las sesiones se destruyen en cuanto hacemos logout. Con las sesiones podemos tener informacion especifica de un usuario para pesonalizar el contenido que le mostramos
+
+Con la funcion session_start() podemos decirle a PHP que queremos empezar a trabajar con sesiones, siempre hay que incluirla en todos los archivos en donde queremos usar sesiones
+
+Una vez que tenemos una sesion iniciada, podemos empezar a escribir y obtener datos a traves de la variable superglobal $_SESSION (Un arreglo de datos unico por usuario), cuando cerremos la sesion estos datos serán borrados
 
 **$_REQUEST:** Por defecto contiene el contenido o valores de las variables superglobales $_GET, $_POST y $_COOKIE.
 
