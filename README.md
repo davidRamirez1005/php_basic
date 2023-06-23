@@ -119,6 +119,13 @@ desde fuera de la clase directamente.
 
 **Polimorfismo:** Es la capacidad de un objeto de tomar diferentes formas o comportarse de diferentes maneras según el contexto. Permite utilizar una interfaz común para objetos de diferentes clases y proporciona flexibilidad y extensibilidad en el diseño de programas.
 
+--------------------------------------------------------------------
+
+**Singleton*
+
+Este patrón se puede pensar como un patrón de creación o de comportamiento. La idea consiste en tener un clase que tenga una sola instancia en nuestra aplicación. Usualmente este patrón se utiliza para optimizar recursos.
+
+Este se encarga de evitar a toda costa de exista más de una instancia. Para conseguir esto debemos hacer private el constructor. Para instanciar esta clase, crearemos una función que normalmente se llamará getInstance y está se encargará de comprobar si ya existe una instancia, si no existe una, la función la creará.
 
 --------------------------------------------------------------------
 
